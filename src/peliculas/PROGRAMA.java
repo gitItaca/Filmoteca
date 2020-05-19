@@ -93,11 +93,11 @@ public class PROGRAMA {
 		num = Leer.pedirEnteroValidar();
 		if(num != 0) {
 			for(int x=0; x<num; x++) {
-				System.out.println("Nombre del director");
+				System.out.println("Nombre del director.");
 				nDirector = Leer.pedirCadena();
-				System.out.println("Apellidos del director");
+				System.out.println("Apellidos del director.");
 				aDirector = Leer.pedirCadena();
-				System.out.println("Edad del director");
+				System.out.println("Edad del director.");
 				eDirector = Leer.pedirEnteroValidar();
 				
 				Director unDirector = new Director(nDirector, aDirector, eDirector);
