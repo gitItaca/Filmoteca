@@ -540,7 +540,7 @@ public class PROGRAMA {
 				}//FIN for pelicula
 				raf.close();
 			} catch (IOException e) {
-				System.out.println("Se produce un IOException");
+				System.out.println("Se produce un IOException.");
 			}
 		}//FIN if lista vacia
 	}//FIN grabarPeliculaAleatorio
@@ -580,7 +580,7 @@ public class PROGRAMA {
 			}//FIN while
 			raf.close();
 		} catch (IOException e) {
-			System.out.println("Se produce un IOException");
+			System.out.println("Se produce un IOException.");
 		}
 	}//FIN importarPeliculaAleatorio
 }//FIN PROGRAMA
