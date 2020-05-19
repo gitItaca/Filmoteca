@@ -191,25 +191,25 @@ public class PROGRAMA {
 					System.out.println("Escriba el nuevo nombre.");
 					nombre = Leer.pedirCadena();
 					unaPelicula.setNombre(nombre);
-					System.out.println("Nombre modificado con éxito");
+					System.out.println("Nombre modificado con éxito.");
 					break;
 				case 2:																//Añadir actor
-					System.out.println("Nombre del actor");
+					System.out.println("Nombre del actor.");
 					String nActor = Leer.pedirCadena();
-					System.out.println("Apellidos del actor");
+					System.out.println("Apellidos del actor.");
 					String aActor = Leer.pedirCadena();
-					System.out.println("Edad del actor");
+					System.out.println("Edad del actor.");
 					int eActor = Leer.pedirEnteroValidar();
 					
 					unActor = new Actor(nActor, aActor, eActor);
 					unaPelicula.addActorToPelicula(unActor);
 					break;
 				case 3:																//Añadir director
-					System.out.println("Nombre del director");
+					System.out.println("Nombre del director.");
 					String nDirector = Leer.pedirCadena();
-					System.out.println("Apellidos del director");
+					System.out.println("Apellidos del director.");
 					String aDirector = Leer.pedirCadena();
-					System.out.println("Edad del director");
+					System.out.println("Edad del director.");
 					int eDirector = Leer.pedirEnteroValidar();
 					
 					unDirector = new Director(nDirector, aDirector, eDirector);
@@ -227,7 +227,7 @@ public class PROGRAMA {
 						y = Leer.pedirEnteroValidar();
 						unActor = unaPelicula.getSusActores().get(y);
 						unaPelicula.deleteActorFromPelicula(unActor);
-						System.out.println("Actor borrado");
+						System.out.println("Actor borrado.");
 					}
 					break;
 				case 5:																//Borrar director
@@ -262,25 +262,25 @@ public class PROGRAMA {
 		String nombre, apellido;
 		
 		if(Film.getSusPeliculas().isEmpty()) {
-			System.out.println("La lista está vacía, registre o importe primero alguna película");
+			System.out.println("La lista está vacía, registre o importe primero alguna película.");
 		}else {
 			System.out.println("¿Qué criterio de búsqueda elige?");
 			
 			do {
-			System.out.println("1- Nombre de la película");	
-			System.out.println("2- Nombre del director");	
-			System.out.println("3- Nombre del actor");	
-			System.out.println("0- Salir");
+			System.out.println("1- Nombre de la película.");	
+			System.out.println("2- Nombre del director.");	
+			System.out.println("3- Nombre del actor.");	
+			System.out.println("0- Salir.");
 			
 			opcion = Leer.pedirEnteroValidar();
 			while (opcion < 0 || opcion > 3) {
-				System.out.println("Por favor, ingrese uno de los números disponibles");
+				System.out.println("Por favor, ingrese uno de los números disponibles.");
 				opcion = Leer.pedirEnteroValidar();
 			}
 				switch(opcion) {
 				case 1:					
 					cont = 0;					
-					System.out.println("1- Escriba el nombre de la película");
+					System.out.println("1- Escriba el nombre de la película.");
 					nombre = Leer.pedirCadena();
 					for(int z=0; z<Film.getSusPeliculas().size();z++) {						
 						Pelicula unaPelicula = Film.getSusPeliculas().get(z);
@@ -289,14 +289,14 @@ public class PROGRAMA {
 							cont++;
 						}
 					}//FIN for
-					if(cont==0) System.out.println("No existe");					
+					if(cont==0) System.out.println("No existe.");					
 					break;
 					
 				case 2:					
 					cont = 0;					
-					System.out.println("Escriba el nombre del director");
+					System.out.println("Escriba el nombre del director.");
 					nombre = Leer.pedirCadena();
-					System.out.println("Escriba el apellido del director");
+					System.out.println("Escriba el apellido del director.");
 					apellido = Leer.pedirCadena();
 					for(int z=0; z<Film.getSusPeliculas().size();z++) {						
 						Pelicula unaPelicula = Film.getSusPeliculas().get(z);
@@ -308,14 +308,14 @@ public class PROGRAMA {
 							}
 						}
 					}//FIN for
-					if(cont==0) System.out.println("No existe");					
+					if(cont==0) System.out.println("No existe.");					
 					break;
 					
 				case 3:					
 					cont = 0;					
-					System.out.println("1- Escriba el nombre del actor");
+					System.out.println("1- Escriba el nombre del actor.");
 					nombre = Leer.pedirCadena();
-					System.out.println("Escriba el apellido del actor");
+					System.out.println("Escriba el apellido del actor.");
 					apellido = Leer.pedirCadena();
 					for(int z=0; z<Film.getSusPeliculas().size();z++) {						
 						Pelicula unaPelicula = Film.getSusPeliculas().get(z);
@@ -327,7 +327,7 @@ public class PROGRAMA {
 							}
 						}
 					}//FIN for
-					if(cont==0) System.out.println("No existe");					
+					if(cont==0) System.out.println("No existe.");					
 					break;					
 				}//FIN switch
 			}while(opcion!=0);
@@ -337,7 +337,7 @@ public class PROGRAMA {
 	
 	public static void grabarPeliculaTxt(Filmoteca Film) {
 		if(Film.getSusPeliculas().isEmpty()) {
-			System.out.println("La lista está vacía, registre o importe primero alguna película");
+			System.out.println("La lista está vacía, registre o importe primero alguna película.");
 		}else {
 			try {
 				FileWriter fw = new FileWriter("Filmoteca.txt", true);
@@ -365,7 +365,7 @@ public class PROGRAMA {
 				
 				fw.close();
 			} catch (IOException e) {
-				System.out.println("Se produce un IOException");
+				System.out.println("Se produce un IOException.");
 			}//FIN try/catch
 		}//FIN if lista vacia
 	}//FIN grabarPelicula
@@ -409,16 +409,16 @@ public class PROGRAMA {
 			}//FIN while
 			fichero.close();
 		} catch (FileNotFoundException e) {
-			System.out.println("Se produce un FileNotFoundException");
+			System.out.println("Se produce un FileNotFoundException.");
 		} catch (IOException e) {
-			System.out.println("Se produce un IOException");
+			System.out.println("Se produce un IOException.");
 		}//FIN try
 		
 	}//FIN importarPeliculaTxt
 	
 	public static void grabarPeliculaBinario(Filmoteca Film){
 		if(Film.getSusPeliculas().isEmpty()) {
-			System.out.println("La lista está vacía, registre o importe primero alguna película");
+			System.out.println("La lista está vacía, registre o importe primero alguna película.");
 		}else {
 			try {
 				File f = new File("FicheroB.dat");
@@ -444,7 +444,7 @@ public class PROGRAMA {
 				}
 				dos.close();
 			} catch (IOException e) {
-				System.out.println("Se produce un IOException");
+				System.out.println("Se produce un IOException.");
 			}//FIN try/catch
 		}
 	}//FIN grabarPeliculaBinario
@@ -491,15 +491,15 @@ public class PROGRAMA {
 			}//FIN while
 			
 		} catch (EOFException e) {
-			System.out.println("Se produce un EOFException");
+			System.out.println("Se produce un EOFException.");
 		} catch (IOException e) {
-			System.out.println("Se produce un IOException");
+			System.out.println("Se produce un IOException.");
 		} 
 		
 		try {
 			dis.close();
 		} catch (IOException e) {
-			System.out.println("Se produce un IOException");
+			System.out.println("Se produce un IOException.");
 		}
 	}//FIN leerPeliculaBinario
 
@@ -507,7 +507,7 @@ public class PROGRAMA {
 		RandomAccessFile raf;
 		
 		if(Film.getSusPeliculas().isEmpty()) {
-			System.out.println("La lista está vacía, registre o importe primero alguna película");
+			System.out.println("La lista está vacía, registre o importe primero alguna película.");
 		}else {
 			try {
 				raf = new RandomAccessFile("FicheroA.txt", "rw");
