@@ -73,7 +73,7 @@ public class PROGRAMA {
 				case 11: try {
 						importarPeliculaAleatorio(Film);
 					} catch (FileNotFoundException e) {
-						System.out.println("excepción salta");
+						System.out.println("Excepción salta.");
 					} break;
 				}//FIN switch
 				
