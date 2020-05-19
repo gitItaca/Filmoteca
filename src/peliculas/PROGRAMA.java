@@ -93,11 +93,11 @@ public class PROGRAMA {
 		num = Leer.pedirEnteroValidar();
 		if(num != 0) {
 			for(int x=0; x<num; x++) {
-				System.out.println("Nombre del director");
+				System.out.println("Nombre del director.");
 				nDirector = Leer.pedirCadena();
-				System.out.println("Apellidos del director");
+				System.out.println("Apellidos del director.");
 				aDirector = Leer.pedirCadena();
-				System.out.println("Edad del director");
+				System.out.println("Edad del director.");
 				eDirector = Leer.pedirEnteroValidar();
 				
 				Director unDirector = new Director(nDirector, aDirector, eDirector);
@@ -109,11 +109,11 @@ public class PROGRAMA {
 		num = Leer.pedirEnteroValidar();
 		if(num != 0) {
 			for(int x=0; x<num; x++) {
-				System.out.println("Nombre del actor");
+				System.out.println("Nombre del actor.");
 				nActor = Leer.pedirCadena();
-				System.out.println("Apellidos del actor");
+				System.out.println("Apellidos del actor.");
 				aActor = Leer.pedirCadena();
-				System.out.println("Edad del actor");
+				System.out.println("Edad del actor.");
 				eActor = Leer.pedirEnteroValidar();
 				
 				Actor unActor = new Actor(nActor, aActor, eActor);
@@ -146,7 +146,7 @@ public class PROGRAMA {
 			}
 			unaPelicula=Film.getSusPeliculas().get(idPeli);
 			Film.deletePeliFromFilmoteca(unaPelicula);
-			System.out.println("Película eliminada");
+			System.out.println("Película eliminada.");
 		}
 	}//FIN borrarPelicula
 	
@@ -167,11 +167,11 @@ public class PROGRAMA {
 			}//FIN for lista peliculas
 			x = Leer.pedirEnteroValidar();
 			while (x < 0 || x > Film.getSusPeliculas().size()) {					//Comprueba que el usuario haya metido un numero disponible
-				System.out.println("Por favor, ingrese uno de los números disponibles");
+				System.out.println("Por favor, ingrese uno de los números disponibles.");
 				x = Leer.pedirEnteroValidar();
 			}
 			unaPelicula = Film.getSusPeliculas().get(x);							//Una vez elegido el numero, le pregunta que opcion quiere modificar de la pelicula
-			System.out.println("Elige que quieres modificar de la película \n " + unaPelicula.toString());
+			System.out.println("Elige que quieres modificar de la película: \n " + unaPelicula.toString());
 			do {
 				System.out.println("___________MODIFICAR______________");
 				System.out.println("1_ Cambiar nombre de la película.");
@@ -183,7 +183,7 @@ public class PROGRAMA {
 				
 				opcion = Leer.pedirEnteroValidar();
 				while (opcion < 0 || opcion > 5) {									//Comprueba que la opcion del menu sea valida
-					System.out.println("Por favor, ingrese uno de los números disponibles");
+					System.out.println("Por favor, ingrese uno de los números disponibles.");
 					opcion = Leer.pedirEnteroValidar();
 				}
 				switch(opcion) {
@@ -242,7 +242,7 @@ public class PROGRAMA {
 						y = Leer.pedirEnteroValidar();
 						unDirector = unaPelicula.getSusDirectores().get(y);
 						unaPelicula.deleteDirectorFromPelicula(unDirector);
-						System.out.println("Director borrado");
+						System.out.println("Director borrado.");
 					}
 					break;			
 				}//FIN switch				
