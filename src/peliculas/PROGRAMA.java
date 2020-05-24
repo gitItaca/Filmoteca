@@ -36,11 +36,11 @@ public class PROGRAMA {
 		do {
 			System.out.println("___________MENU______________");
 			System.out.println();
-			System.out.println(" 1- Registrar película");
-			System.out.println(" 2- Borrar película");
-			System.out.println(" 3- Modificar película");
-			System.out.println(" 4- Ver lista películas");
-			System.out.println(" 5- Buscar película");
+			System.out.println(" 1- Registrar película.");
+			System.out.println(" 2- Borrar película.");
+			System.out.println(" 3- Modificar película.");
+			System.out.println(" 4- Ver lista películas.");
+			System.out.println(" 5- Buscar película.");
 			System.out.println(" 6- Grabar película txt");
 			System.out.println(" 7- Importar película txt");
 			System.out.println(" 8- Grabar película binario");
